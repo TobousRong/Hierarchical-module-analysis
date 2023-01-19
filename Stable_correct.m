@@ -6,7 +6,7 @@ function [Hin,Hse] = Stable_correct(sFC,IN,IM,N)
 [R_IN,R_IM] =Balance(sFC,N,Clus_size,Clus_num);%% integration component R_IN and segregation component R_IM for stable Fc matrix.  
 %% Proportional calibration scheme. Since our Gaussian model has proved a theoretical functional balance,
 %% the mean individual integration and segregation components were calibrated to the equal value, R_IN.
-p=(mean(IM)-R_IN)/mean(IM);%%
+p=(mean(IM)-R_IM)/mean(IM);%%
 Hse=IM*(1-p);
 p=(mean(IN)-R_IN)/mean(IN);
 Hin=IN*(1-p);
