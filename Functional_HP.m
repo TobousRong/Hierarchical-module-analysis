@@ -36,7 +36,7 @@ for mode=2:N
          eval(['clear',' H',num2str(mode-1),'_',num2str(j),'']);
     end
      Z=[];
-    if (Clus_num(end)==N)
+    if (Clus_num(end)==N || mode == N)
         for j=1:2*Clus_num(mode)
             Z=[Z;eval(['H',num2str(mode),'_',num2str(j)])];
         end
